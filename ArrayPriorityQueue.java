@@ -6,17 +6,17 @@
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
-public class ArrayPriorityQueue{
+public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
 
-    ArrayList<Comparable> _data;
+    ArrayList<Ticket> _data;
     
     public ArrayPriorityQueue(){
-	_data = new ArrayList<Comparable>();
+	_data = new ArrayList<Ticket>();
     }
 
-    public void add(Comparable x){
+    public void add(Ticket x){
         int i = 0;
-	while( i < _data.size() && _data.get(i).compareTo(x) > 0 )
+	while( i < _data.size() && ((Comparable) _data.get(i)).compareTo(x) > 0 )
 	    i += 1;
 	_data.add(i,x);
     }
@@ -25,13 +25,13 @@ public class ArrayPriorityQueue{
 	return _data.size() == 0;
     }
 
-    public Comparable peekMin(){
+    public Ticket peekMin(){
 	if( isEmpty() )
 	    throw new NoSuchElementException("Data structure is empty");
 	return _data.get(_data.size() - 1);
     }
 
-    public Comparable removeMin(){
+    public Ticket removeMin(){
 	if( isEmpty() )
 	    throw new NoSuchElementException("u doofus");
 	return _data.remove(_data.size() - 1);
