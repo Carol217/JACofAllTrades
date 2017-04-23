@@ -1,6 +1,10 @@
 # JACofAllTrades
 ## Team Roster: Andrew Qu, Carol Pan, Judy Liu
 
+## Design
+
+The user of the help desk is first greeted by (the homescreen) the choices of submitting an issue, resolving an issue or exiting the help desk. When choosing to submit an issue the user has to enter his/her name and his/her job title and his/her issue. If they choose to resolve an issue he/she enters the solution. After submitting or resolving an issue, user returns to the home screen.
+
 ## Classes
 
 ### 1. Ticket
