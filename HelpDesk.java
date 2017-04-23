@@ -38,12 +38,12 @@ public class HelpDesk{
 	    System.out.println("No problems are currently enqueued");
 	    return null;
 	}
-	return _queue.removeMin();
+	return _queue.peekMin();
     }
 
     //solve latest problem, and remove ticket from queue
     public boolean solveTicket(){
-	Ticket prob = currentTicket();
+	Ticket prob = _queue.removeMin();
 	System.out.println("Now resolving " + prob);
 	System.out.print("What is your solution, IT guy?");
 	String sol = Keyboard.readString();
@@ -65,7 +65,8 @@ public class HelpDesk{
 			   "\n\t1. President" +
 			   "\n\t2. Vice President or Senior Executive" +
 			   "\n\t3. Manager" +
-			   "\n\t4. Staff");
+			   "\n\t4. Staff" +
+			   "\n\t5. I don't work here (but thank you for being nice and printing out stuff for me anyway)");
 	int priority = Keyboard.readInt();
 
 	//getting the problem
