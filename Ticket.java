@@ -10,21 +10,29 @@
  **************************/
 
 public class Ticket implements Comparable{
+
+    //~~~~~~~~~~~instance vars~~~~~~~~~~~~
     private int id;
     private int VIP;
     private String problem;
     private boolean solved;
     private String name; 
     private String solution;
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     public Ticket(int Importance){
 	VIP = Importance;
     }
 
+    //~~~~~~~~~~~~~~~accessors~~~~~~~~~~~~
     public String getProblem(){
 	return "";
     }
 
+    public int getVIP() {
+	return VIP;
+    }
+    
     public boolean isSolved(){
 	return false;
     }
