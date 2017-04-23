@@ -3,7 +3,7 @@
 
 ## Classes
 
-###1. Ticket
+### 1. Ticket
 * Instance variables: 
  1. (-) int id
    - Unique ticket number
@@ -37,7 +37,7 @@
  3. (+) String toString()
    - Returns a string with information about the ticket ID, the problem, the name of the user that introduced the problem and the solution
  
-###2. Help Desk
+### 2. Help Desk
  * Methods
  1. (+) Ticket currentTicket()
    - Returns the lastest ticket under perusual
