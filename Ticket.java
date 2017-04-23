@@ -65,7 +65,7 @@ public class Ticket implements Comparable{
 	String retStr = "";
 	retStr += "Ticket " + id + ": submitted by " + name;
 	retStr += "\nissue: " + problem;
-	retStr ++ "\nsolution: " + solution;
+	retStr += "\nsolution: " + solution;
 	return retStr;
     }
 }
