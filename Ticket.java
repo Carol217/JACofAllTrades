@@ -17,8 +17,8 @@ public class Ticket implements Comparable{
     private String name; 
     private String solution;
 
-    public Ticket(){
-
+    public Ticket(int Importance){
+	VIP = Importance;
     }
 
     public String getProblem(){
@@ -33,8 +33,13 @@ public class Ticket implements Comparable{
 	return;
     }
 
-    public int compareTo(Ticket t){
-	return 1;
+    public int compareTo(Object t){
+	Ticket tic = (Ticket) t;
+	if(VIP < tic.VIP)
+	    return 1;
+	else if(VIP == tic.VIP)
+	    return 0;
+	return -1;
     }
 
     public int getID(){
@@ -42,6 +47,6 @@ public class Ticket implements Comparable{
     }
 
     public String toString(){
-	return "";
+	return "Ticket of vip level: " + VIP;
     }
 }
