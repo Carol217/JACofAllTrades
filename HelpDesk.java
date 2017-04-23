@@ -15,12 +15,14 @@ import cs1.Keyboard;
 public class HelpDesk{
     
     //~~~~~~instance vars~~~~~~~~~~~  
-    private ArrayPriorityQueue _queue;	
+    private ArrayPriorityQueue _queue;
+    private int counter;
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //~~~~~~basic methods~~~~~~~~~~~~
     public HelpDesk(){
 	_queue = new ArrayPriorityQueue();
+	counter = 0;
     }
 
     public String toString(){
@@ -60,10 +62,11 @@ public class HelpDesk{
 	System.out.println("Please describe the problem you are experiencing.");
 	String problem = Keyboard.readString();
 
-	Ticket tic = new Ticket(0,priority,name,problem);
+	Ticket tic = new Ticket(counter,priority,name,problem);
 	System.out.println("\n\tNew Ticket Created: \n" + tic);
 	System.out.println("\nA professional will fix this problem shortly."
 			   + "\nThank you");
+	counter ++;
 	
     }
 
