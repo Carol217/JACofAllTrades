@@ -38,12 +38,12 @@ public class HelpDesk{
 	    System.out.println("No problems are currently enqueued");
 	    return null;
 	}
-	return _queue.peekMin();
+	return (Ticket)_queue.peekMin();
     }
 
     //solve latest problem, and remove ticket from queue
     public boolean solveTicket(){
-	Ticket prob = _queue.removeMin();
+	Ticket prob = (Ticket)_queue.removeMin();
 	System.out.println("Now resolving " + prob);
 	System.out.print("What is your solution, IT guy?");
 	String sol = Keyboard.readString();
