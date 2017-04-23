@@ -26,7 +26,7 @@ public class Ticket implements Comparable{
 	problem = Oops;
 	name = Name;
 	solved = false;
-	solution = "";
+	solution = "?";
     }
 
     //~~~~~~~~~~~~~~~accessors~~~~~~~~~~~~
