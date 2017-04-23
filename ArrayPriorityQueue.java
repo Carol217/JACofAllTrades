@@ -52,13 +52,16 @@ public class ArrayPriorityQueue implements PriorityQueue<Ticket>{
 	while( !APQ.isEmpty() )
 	    System.out.print("  " + APQ.removeMin());
 	    */
-
+	
+	//Testing APQ for Ticket(s)
 	ArrayPriorityQueue APQ = new ArrayPriorityQueue();
 	for(int i = 0;i < 10;i ++){
-	    Ticket t = new Ticket(i);
+	    Ticket t = new Ticket(i,(int)(Math.random() * 10),"random name","random issue");
 	    APQ.add(t);
 	}
-	while( !APQ.isEmpty() )
+	while( !APQ.isEmpty() ){
+	    System.out.println(APQ.peekMin().getVIP());
 	    System.out.println(APQ.removeMin());
+	}
     }
 }
