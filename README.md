@@ -4,7 +4,7 @@
 ## Classes
 
 ### 1. Ticket
-* Instance variables: 
+#### * Instance variables: 
  1. (-) int id
    - Unique ticket number
  2. (-) int vip
@@ -18,7 +18,7 @@
  6. (-) String solution
    - If the problem is not solved, this is an empty string
  
-* Accessors:
+#### * Accessors:
  1. (+) String getProblem()
    - Returns the problem
  2. (+) int getVIP()
