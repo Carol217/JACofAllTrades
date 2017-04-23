@@ -6,9 +6,9 @@
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
-public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
+public class ArrayPriorityQueue implements PriorityQueue<Ticket>{
 
-    ArrayList<Ticket> _data;
+    private ArrayList<Ticket> _data;
     
     public ArrayPriorityQueue(){
 	_data = new ArrayList<Ticket>();
@@ -38,7 +38,8 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
     }
 
     public static void main(String[] args){
-	/* testing for ints
+	/*
+
 	ArrayPriorityQueue APQ = new ArrayPriorityQueue();
 	System.out.print("Values added: ");
 	for(int i = 0;i < 10;i ++){
@@ -50,7 +51,7 @@ public class ArrayPriorityQueue<Ticket> implements PriorityQueue<Ticket>{
 	System.out.print("Order of removal: ");
 	while( !APQ.isEmpty() )
 	    System.out.print("  " + APQ.removeMin());
-	*/
+	    */
 
 	ArrayPriorityQueue APQ = new ArrayPriorityQueue();
 	for(int i = 0;i < 10;i ++){
