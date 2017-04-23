@@ -1,3 +1,14 @@
+//Team JACofAllTrades
+//Judy Liu, Carol Pan, Andrew Qu
+//APCS2 pd5
+//LAB03 -RUVIP
+//2017-04-24
+
+/****************************
+ * Interface PriorityQueue
+ * a queue with prioritizing functionalities
+ ***************************/
+
 public interface PriorityQueue<T>{
 
     /****************************

@@ -1,3 +1,14 @@
+//Team JACofAllTrades
+//Judy Liu, Carol Pan, Andrew Qu
+//APCS2 pd5
+//LAB03 -RUVIP
+//2017-04-24
+
+/***************************
+ * class Ticket
+ * models a help desk request
+ **************************/
+
 public class Ticket implements Comparable{
     private int id;
     private int VIP;
