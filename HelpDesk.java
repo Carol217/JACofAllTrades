@@ -92,18 +92,27 @@ public class HelpDesk{
 	System.out.println("Welcome to the HelpDesk! Are you here to:");
 	System.out.println("1: Submit an issue");
 	System.out.println("2: Resolve these issues. I work here!");
-	System.out.print("Please select choice 1 or 2: ");
+	System.out.println("3: Exit");
+	System.out.print("Please select choice 1,2, or 3: ");
 	int choice = Keyboard.readInt();
-	while(choice != 1 && choice != 2){
+	while(choice != 1 && choice != 2 && choice != 3){
 	    System.out.print("Please make a valid selection: ");
 	    choice = Keyboard.readInt();
 	}
-	if(choice == 1)
-	    HD.addTicket();
-	else
-	    HD.solveTicket();
-
-	System.out.println("Thx for the help b");
+        while(choice != 3){
+	    if(choice == 1)
+		HD.addTicket();
+	    else
+		HD.solveTicket();
+	    System.out.println("Would you like to: " +
+			       "\n1: Submit another issue" +
+			       "\n2: Fix some issues" +
+			       "\n3: Exit");
+	    System.out.print("Choice: ");
+	    choice = Keyboard.readInt();
+	}
+		
+	System.out.println("Thank you for using the HelpDesk!");
 	//should go through necessary options to do either
 	//and then maybe a do you still want to work at the help desk?
     }
