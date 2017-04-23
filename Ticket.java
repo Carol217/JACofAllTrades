@@ -13,48 +13,59 @@ public class Ticket implements Comparable{
 
     //~~~~~~~~~~~instance vars~~~~~~~~~~~~
     private int id;
-    private int VIP;
+    private int vip;
     private String problem;
     private boolean solved;
     private String name; 
     private String solution;
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    public Ticket(int Importance){
-	VIP = Importance;
+    public Ticket(int ID, int Importance, String Name, String Oops){
+	id = ID;
+	vip = Importance;
+	problem = Oops;
+	name = Name;
+	solved = false;
+	solution = "";
     }
 
     //~~~~~~~~~~~~~~~accessors~~~~~~~~~~~~
     public String getProblem(){
-	return "";
+	return problem;
     }
 
     public int getVIP() {
-	return VIP;
+	return vip;
+    }
+
+    public int getID(){
+	return id;
     }
     
     public boolean isSolved(){
-	return false;
+	return solved;
     }
 
+    public String getSolution(){
+	return solution;
+    }
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     public void solve(String s){
-	return;
+        solution = s;
+	solved = true;
     }
 
     public int compareTo(Object t){
 	Ticket tic = (Ticket) t;
-	if(VIP < tic.VIP)
-	    return 1;
-	else if(VIP == tic.VIP)
-	    return 0;
-	return -1;
-    }
-
-    public int getID(){
-	return 1;
+        return vip - tic.getVIP();
     }
 
     public String toString(){
-	return "Ticket of vip level: " + VIP;
+	String retStr = "";
+	retStr += "Ticket " + id + ": submitted by " + name;
+	retStr += "\nissue: " + problem;
+	retStr ++ "\nsolution: " + solution;
+	return retStr;
     }
 }
